@@ -1,1 +1,1 @@
-![Image](image.jpg)
+![Image](image.png)
