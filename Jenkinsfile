@@ -35,7 +35,10 @@ pipeline {
                     Build Number: ${env.BUILD_NUMBER}
                     Build URL: ${env.BUILD_URL}
                 """,
-                to: 'horeainakshi97@example.com'
+                to: 'horeainakshi97@gmail.com',
+                from:'horeainakshi97@gmail.com',
+                replyTo:'horeainakshi97@gmail.com',
+                mimeType: 'text/html'
             )
         }
     }
