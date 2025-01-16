@@ -27,3 +27,6 @@ Continuous Integration (CI) is a powerful practice that enhances the efficiency 
    - Automation saves time on repetitive tasks, allowing developers to focus on innovation.
 
 By implementing CI, teams can streamline workflows, improve efficiency, and deliver high-quality software faster.
+
+ # Adding email notification in pipeline
+![Image](email.png)
