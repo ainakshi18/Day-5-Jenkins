@@ -25,21 +25,19 @@ pipeline {
             }
         }
     }
-    post {
-    success {
-        emailext(
-            subject: "Build Succeeded: ${currentBuild.fullDisplayName}",
-            body: "The build was successful.",
-            to: 'horeainakshi97@gmail.com'
-        )
+       post {
+        always {
+            emailext(
+                subject: "Jenkins Build Notification: ${currentBuild.fullDisplayName}",
+                body: """\
+                    Build Status: ${currentBuild.currentResult}
+                    Project: ${env.JOB_NAME}
+                    Build Number: ${env.BUILD_NUMBER}
+                    Build URL: ${env.BUILD_URL}
+                """,
+                to: 'horeainakshi97@example.com'
+            )
+        }
     }
-    failure {
-        emailext(
-            subject: "Build Failed: ${currentBuild.fullDisplayName}",
-            body: "The build failed. Check the logs for more information.",
-            to: 'horeainakshi97@gmail.com'
-        )
-    }
-}
 
 }
