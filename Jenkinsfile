@@ -36,7 +36,7 @@ pipeline {
                     Build URL: ${env.BUILD_URL}
                 """,
                 recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                to: 'horeainakshi@gmail.com' // Replace with your email
+                to: 'horeainakshi97@gmail.com' // Replace with your email
             )
         }
     }
