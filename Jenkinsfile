@@ -25,4 +25,19 @@ pipeline {
             }
         }
     }
+     post {
+        always {
+            emailext(
+                subject: "Jenkins Build Notification: ${currentBuild.fullDisplayName}",
+                body: """\
+                    Build Status: ${currentBuild.currentResult}
+                    Project: ${env.JOB_NAME}
+                    Build Number: ${env.BUILD_NUMBER}
+                    Build URL: ${env.BUILD_URL}
+                """,
+                recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                to: 'horeainakshi@gmail.com' // Replace with your email
+            )
+        }
+    }
 }
