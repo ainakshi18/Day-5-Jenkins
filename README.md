@@ -30,3 +30,7 @@ By implementing CI, teams can streamline workflows, improve efficiency, and deli
 
  # Adding email notification in pipeline
 ![Image](email.png)
+
+Making changes for jenkins trigger
+
+
